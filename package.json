@@ -1,5 +1,6 @@
 {
   "name": "quiz",
+  "homepage": "https://quantum-maths.github.io/quiz/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
