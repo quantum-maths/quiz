@@ -13,7 +13,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/quiz",
-      element: <Navigate replace to={`/question/${uuidv4()}`} />,
+      element: <Navigate replace to={`/quiz/question/${uuidv4()}`} />,
     },
     {
       path: "/quiz/question/:id",
