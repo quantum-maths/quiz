@@ -3,7 +3,6 @@ import Header from "../../ui/header/header";
 import useLocalStorage from "../../hooks/useLocalStorage/useLocalStorage";
 import { questions } from "./utils";
 import { useRef } from "react";
-import "./style.css";
 import Button from "../../ui/button/button";
 import { v4 as uuidv4 } from "uuid";
 import Input from "../../ui/input/input";

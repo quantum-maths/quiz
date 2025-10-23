@@ -1,9 +1,13 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
-import Question from "./features/question/question";
-import NotFound from "./components/not-found/not-found";
 import { v4 as uuidv4 } from "uuid";
-import Email from "./features/email/email";
-import Result from "./features/result/result";
+import { Protected } from "./components/protected/protected";
+import { Email, NotFound, Question, Result } from "./lazy";
+import { Suspense } from "react";
+import Loading from "./components/loading/loading";
+
+const ProtectedQuestion = Protected(Question);
+const ProtectedEmail = Protected(Email);
+const ProtectedResult = Protected(Result);
 
 function App() {
   const router = createBrowserRouter([
@@ -13,15 +17,15 @@ function App() {
     },
     {
       path: "/question/:id",
-      element: <Question />,
+      element: <ProtectedQuestion />,
     },
     {
       path: "/email",
-      element: <Email />,
+      element: <ProtectedEmail />,
     },
     {
       path: "/result",
-      element: <Result />,
+      element: <ProtectedResult />,
     },
     {
       path: "*",
@@ -29,7 +33,11 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
 
 export default App;
