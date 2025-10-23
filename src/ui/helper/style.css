@@ -1,0 +1,7 @@
+.helper {
+  color: red;
+  position: absolute;
+  bottom: -20px; /* adjust as needed depending on your input height */
+  left: 0;
+  font-size: 12px;
+}
