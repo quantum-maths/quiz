@@ -18,26 +18,26 @@ export const Protected = <P extends object>(
     const { pathname } = useLocation();
 
     if (answers.question_answers.length === 0) {
-      if (!pathname.startsWith("/question")) {
-        return <Navigate to={`/question/${uuidv4()}`} replace />;
+      if (!pathname.startsWith("/quiz/question")) {
+        return <Navigate to={`/quiz/question/${uuidv4()}`} replace />;
       }
     }
 
     if (answers.question_answers.length === 1) {
-      if (!pathname.startsWith("/question")) {
-        return <Navigate to={`/question/${uuidv4()}`} replace />;
+      if (!pathname.startsWith("/quiz/question")) {
+        return <Navigate to={`/quiz/question/${uuidv4()}`} replace />;
       }
     }
 
     if (answers.question_answers.length >= 2 && !answers.email) {
-      if (pathname !== "/email") {
-        return <Navigate to="/email" replace />;
+      if (pathname !== "/quiz/email") {
+        return <Navigate to="/quiz/email" replace />;
       }
     }
 
     if (answers.email) {
-      if (pathname !== "/result") {
-        return <Navigate to="/result" replace />;
+      if (pathname !== "/quiz/result") {
+        return <Navigate to="/quiz/result" replace />;
       }
     }
 

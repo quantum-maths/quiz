@@ -12,19 +12,19 @@ const ProtectedResult = Protected(Result);
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/quiz",
       element: <Navigate replace to={`/question/${uuidv4()}`} />,
     },
     {
-      path: "/question/:id",
+      path: "/quiz/question/:id",
       element: <ProtectedQuestion />,
     },
     {
-      path: "/email",
+      path: "/quiz/email",
       element: <ProtectedEmail />,
     },
     {
-      path: "/result",
+      path: "/quiz/result",
       element: <ProtectedResult />,
     },
     {
