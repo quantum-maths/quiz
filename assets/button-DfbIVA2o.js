@@ -1,1 +1,0 @@
-import{j as s}from"./index-Bs5n-duV.js";const r=({children:t})=>s.jsx("h2",{className:"header",children:t}),a=({children:t,...e})=>s.jsx("button",{className:"custom-button",...e,children:t});export{a as B,r as H};
