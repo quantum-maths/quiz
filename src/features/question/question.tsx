@@ -33,9 +33,11 @@ const Question = () => {
     setAnswers({ ...answers, question_answers: newAnswers });
     ref.current.value = "";
     if (currentNum >= questions.length) {
-      navigate("/email");
+      navigate("/quiz/email");
     } else {
-      navigate(`/question/${uuidv4()}`, { state: { num: currentNum + 1 } });
+      navigate(`/quiz/question/${uuidv4()}`, {
+        state: { num: currentNum + 1 },
+      });
     }
   };
 

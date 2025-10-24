@@ -42,7 +42,7 @@ const Email = () => {
 
     setEmail((prevState) => ({ ...prevState, email }));
 
-    navigate("/result");
+    navigate("/quiz/result");
   };
 
   return (

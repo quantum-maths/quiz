@@ -19,7 +19,7 @@ const Result = () => {
       email: "",
       question_answers: [],
     });
-    navigate("/");
+    navigate("/quiz");
   };
 
   return (
