@@ -1,0 +1,1 @@
+import{j as o}from"./index-BJurPsiP.js";const n=()=>o.jsxs("div",{className:"not-found-container",children:[o.jsx("h1",{className:"not-found-title",children:"404"}),o.jsx("p",{className:"not-found-text",children:"Oops! The page you are looking for doesn’t exist."}),o.jsx("a",{href:"/",className:"not-found-link",children:"Go back home"})]});export{n as default};
